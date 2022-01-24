@@ -1,0 +1,43 @@
+h1 {
+    color:brown ;
+    font-style: italic;
+    font-size: 70px;
+    text-align: center;
+
+
+}
+body {
+    background-image: url("https://image.freepik.com/foto-gratis/abierto-volando-libros-antiguos_1232-2096.jpg");
+    background-size: contain;
+    width:max-content;
+    margin: auto;
+}
+
+section {
+    color:chocolate;
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    outline-style:double;
+    outline-color: cornsilk;
+    }
+
+p {
+    color: darkred;
+}
+label {
+    color: whitesmoke;
+    font-size:x-large;
+    font-weight: 200;
+}
+
+input {
+    background-color:rgb(235, 198, 198);
+}
+
+button {
+    color: crimson;
+
+}
+
+ 
