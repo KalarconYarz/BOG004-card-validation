@@ -1,36 +1,40 @@
 import validator from './validator.js'
 const boton= document.getElementById("validar")
-const ncard= document.getElementById("tarjetaDeCredito");
+const numeroTarjeta= document.getElementById("tarjetaDeCredito");
 
-function mostrarNumero(ncard) {
+function mostrarNumero(numeroTarjeta) {
   
- validator.isValid(ncard) 
+const resultado= validator.isValid(numeroTarjeta) 
+console.log(resultado)
+
+//alert("su tarjeta es invalida");
+
+// resultado= (""), {
+//   if (isValid) {
+//     alert("Digite numero de tarjeta");
+//     }
+    
+     //else {
+    //       mensajeValidar.innerHTML="validando su tarjeta..";                 //Traer objeto del html para dar mensaje//
+    //       if (numeroTarjeta.isValid(numeroTarjeta)) {
+    //         mensajeValidar.innerHTML =" Tarjeta valida";
+    //       }
+    //       else {
+    //         mensajeValidar.innerHTML="Tarjeta invalida";
+    //       }
+    //  }  
+     
+     //usuario digite numero
+
 }
-
-boton.addEventListener("click", ()=>mostrarNumero(ncard.value));
-
-
-
-/*
-  function validarNumero() {
-    const numeroTarjeta=Array.from(numeroTarjeta.value)   //usuario digite numero
-
-    if (numeroTarjeta=="") {
-      alert("Digite numero de tarjeta"); 
-    } 
-
-    else {
-      mensajeValidar.innerHTML="validando su tarjeta..";                 //Traer objeto del html para dar mensaje//
-      if (validator.isValid(numeroTarjeta)) {
-        mensajeValidar.innerHTML =" Tarjeta valida";
-      }   
-      else {
-        mensajeValidar.innerHTML="Tarjeta invalida";
-      }   
-      
-    }
-      
+ //}
+//     
 
 
-  } */
+//}
+
+boton.addEventListener("click", ()=>mostrarNumero(numeroTarjeta.value));
+
+
+
 
