@@ -1,60 +1,56 @@
 const validator = {
   isValid: function (numeroTarjeta) {
-    let sumTotal = 0; // incicializando variable en 0 //
-    let array = numeroTarjeta.split("").reverse(); //split =separador   //Variable tipo array que guarde el numero de tarjeta de credito
-                //Variable que guarda el arreglo en sentido inverso
-  //console.log(numeroTarjeta.split("").reverse())
-  console.log(array);
-  const tamaño = (array.length)
-  console.log(tamaño)
-  for(let i=0 ; i<tamaño ; i++) { 
-                 //inicie desde la posicion 0 (par)
-                 // creo la variable para multimpl *2
-  console.log("num", i);
-  if (i % 2 === 1) {
-    console.log("posicion i", i )
-    let n = array[i] * 2;
-    console.log("variable", n)
-
-    if (parseInt(n)>= 10) {
-      console.log("si es mayor a 10")
-    n = n - 9;
-    console.log("resta", n)
-    }
-    else {
-      sumTotal = sumTotal + parseInt(n);
-    console.log("suma", sumTotal)
-               // el resultado de la variable lo sumo a la sumTotal
-    if (sumTotal % 10 === 0){
-    return true, alert("Tarjeta de credito valida");
-   
+    let cardImpar = 0;
+    let cardPar = 0;
+    numeroTarjeta = numeroTarjeta.split("").reverse(); //split =separador   //Variable tipo array que guarde el numero de tarjeta de credito
+    //Variable que guarda el arreglo en sentido inverso
     
+    for (let i = 0; i < numeroTarjeta.length; i++) {
+     // console.log("num", i); //inicie desde la posicion 0 (par)
+      if (i % 2 === 1) {
+        let n = numeroTarjeta[i] * 2; // creo la variable para multimpl *2
+        console.log("variable", n);
+
+        if (n >= 10) {
+          //comprobar el argumento y devuelva un entero
+          console.log("si es mayor a 10");
+          n = n - 9;
+          console.log("resta", n);
+          cardPar= cardPar + n
+        } else {
+          cardPar = cardPar + parseInt(n);
+          console.log("cardPar", cardPar);
+
+          // el resultado de la variable lo sumo a la sumTota
+        }
+      } else {
+          cardImpar = cardImpar + parseInt(numeroTarjeta[i]) ;
+         console.log("inmar", cardImpar);
+        // return true, alert("Tarjeta de credito valida");
+      }
+    }
+    console.log("validator", (cardPar + cardImpar) % 10 ===0);
+    return (cardPar + cardImpar) % 10 ===0
+  },
+
+  // return (sumTotal + array) % 10 === 0;
+
+  maskify:(numeroTarjeta) => {
+    const ncard1 = numeroTarjeta.split("");
+    console.log(ncard1);
+    const tamaño2 = ncard1.length;
+
+    for (let i = 0; i < tamaño2; i++) {
+      if (i < tamaño2 - 4 && tamaño2 > 4) {
+        ncard1[i] = "#";
+      }
+      const myMascara = ncard1.join("");
+      console.log()
+    return (myMascara);
     }
     
-    }
-  }
-}
-}  
-},         
-     
-        
-       
-        //   return true, alert("Tarjeta de credito valida");
-        // } else return false, alert("Tarjeta de credito invalida");
-      
-      // return (sumTotal + array) % 10 === 0;
-    
-  
-
-//     maskify(numeroTarjeta) {
-//       //console.log(numeroTarjeta)
-//       //function maskify(numeroTarjeta) {
-//      if (numeroTarjeta.length <6) return (v)=>{
-//       const ultimosDigitos = numeroTarjeta.substr(-4);
-//       const primerosDigitos = numeroTarjeta.substr(0, 1);
-//       const enmascararNumeros = numeroTarjeta.substr(1,numeroTarjeta.length -5).replace(/\d/g,'#');
-//       return (`${primerosDigitos}${enmascararNumeros}${ultimosDigitos}`);
-//       //return numeroTarjeta.replace(/.(?=.{4})/g, "#")*/
-
+    // return numeroTarjeta.replace(/.(?=.{4})/g, "#")*/
+  },
+};
 
 export default validator;

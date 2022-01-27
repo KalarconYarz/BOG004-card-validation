@@ -4,14 +4,22 @@ const numeroTarjeta= document.getElementById("tarjetaDeCredito");
 
 function mostrarNumero(numeroTarjeta) {
   
-const resultado= validator.isValid(numeroTarjeta) 
-console.log(resultado)
+const resultado= validator.isValid(numeroTarjeta); 
+console.log("numeroTarjeta", resultado)
 
-//if (validator('')) 
-//  alert("Digite numero de tarjeta")
+
 }
-
 boton.addEventListener("click", ()=>mostrarNumero(numeroTarjeta.value));
+if (validator.isValid('')) {
+  alert("Digite numero de tarjeta")
+  }
+
+if (validator.isValid(numeroTarjeta.value)){
+  alert("tarjeta de credito Valida");
+} else {
+    alert("tarjeta de credito invalida")
+  }
+
 
 
 
