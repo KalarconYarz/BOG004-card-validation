@@ -11,6 +11,7 @@ body {
     background-size: contain;
     width:max-content;
     margin: auto;
+    min-height: auto;
 }
 
 section {
@@ -49,6 +50,15 @@ button {
     display: block;
  
 }
+
+#cardcontainer {
+display: block;
+}
+
+.ventana2 {
+ display: none;
+}
+
 
 
  

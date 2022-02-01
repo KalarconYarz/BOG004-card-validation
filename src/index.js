@@ -2,30 +2,36 @@ import validator from "./validator.js";
 const boton = document.getElementById("validar");
 const numeroTarjeta = document.getElementById("tarjetaDeCredito");
 
+
 function mostrarNumero(numeroTarjeta) {
-  console.log(numeroTarjeta);
-  if (numeroTarjeta === undefined || numeroTarjeta === "" ) {  
-    console.log("dentro del if", numeroTarjeta === undefined)  //=== estrictamente igual //
-    alert("Por favor ingresa tu numero de tarjeta");
+ 
+const notification = validator.isValid(numeroTarjeta);
+const ncAnswer = validator.maskify(numeroTarjeta);
+
+  if (notification == true && ncAnswer !="") {
+    document.getElementById("notifications").style.display="block" 
+    document.getElementById("notifications").innerHTML =
+      "su tarjeta de credito terminada en " +
+      ncAnswer +
+      " fue validada satisfactoriamente!.";
+    document.getElementById("correcto").style.display="block";  //muestre//
+
+    document.getElementById("incorrecto").style.display = "none"; //oculte//
     
-  } else if (validator.isValid(numeroTarjeta)) {
-    console.log(validator.isValid(numeroTarjeta));
-    alert("Su tarjeta de credito " + validator.maskify(numeroTarjeta) +
-        "es Valida" );
-  } else {
-    console.log(validator.maskify(numeroTarjeta));
-    alert( "Su tarjeta de credito " +validator.maskify(numeroTarjeta ) +
-        "es Invalida" );
+  } else if (notification == false && ncAnswer != "") {
+    document.getElementById("notifications").style.display="block" 
+    document.getElementById("notifications").innerHTML =
+      "su tarjeta de credito " +
+      ncAnswer +
+      " es inválida, por favor verifique su tarjeta!.";
+    document.getElementById("incorrecto").style.display = "block";
+    document.getElementById("correcto").style.display = "none";
   }
-  //const resultado = validator.isValid(numeroTarjeta);
- // console.log("cardSplit", resultado);
-  
-  
+  else {
+    alert("Ingrese un número de tarjeta");
+  }
 }
+  
 boton.addEventListener("click", () => mostrarNumero(numeroTarjeta.value));
 
-//const form = document.querySelector("form");
 
-//boton.addEventListener("click"), (e) => resultado(numeroTarjeta.value); {    //alcance del evento //
- 
-//};
