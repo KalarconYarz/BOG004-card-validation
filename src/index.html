@@ -6,22 +6,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1> BOX READ  
-      <img src="https://storage.googleapis.com/ln-archivos/banner/extralarge/47a58039-70be-2b80-a60d-61e1cb8272f2_imagen_web.png" id="portada"alt="Secciones"width="600" > 
-    </h1>
-    <div id="container">
-      <p>Bienvenid@ a su biblioteca virtual</p>
-      <header></header>
+    <header>
+      <h1> BOX READ  
+        <img src="https://storage.googleapis.com/ln-archivos/banner/extralarge/47a58039-70be-2b80-a60d-61e1cb8272f2_imagen_web.png" id="portada"alt="Secciones"width="600" > 
+      </h1>
+      <div id="container">
+        <p>Bienvenid@ a su biblioteca virtual</p>
+    </header>
     </div>
-
-   
-   
+    
     <main>
-      <section>
+      <aside id= "ventana1">
+       <section>
         <h2> Drama </h2>
         <p> Es hora del drama </P>
-        <img src="https://s-media-cache-ak0.pinimg.com/originals/c8/3c/e8/c83ce8545e755bb6839f69ea878ba26d.jpg " width="180">
-          <br> </br>
+        <img id imagen1 src ="https://s-media-cache-ak0.pinimg.com/originals/c8/3c/e8/c83ce8545e755bb6839f69ea878ba26d.jpg " width="180">
+        <br></br>
         <button id="Alquilar1" > Alquilar</button>
       </section>
   
@@ -60,14 +60,20 @@
           <form id="ncard">
             <div class="card number" id="cardcontainer">
               <input type="number" class="submit" id="tarjetaDeCredito" placeholder="0000 0000 0000" maxlenght="13" >
-              <label for id ="tarjeta de crédito" > Tarjeta de crédito </label for>
+              <label for ="tarjeta de crédito" > Tarjeta de crédito </label for>
               <br></br>
               <button id ="validar" type ="button" > validar</button>
             </div> 
           </form>
-        </div>         
+        </div> 
+      <section id= "ventana2">        
       </main>
-    <footer></footer>
+    <footer id="foot">
+      <p class="foot"> Gracias por visitarnos, vuelva pronto </p>
+      <p class="foot"> 📗 Autoras: Eylin Urdaneta, Karen Alarcon <p>
+      <p class= "foot"> 📞 3111111111 <p>
+      <p class= "foot"> 📧 karenyeilin@boxread.com <p>  
+     </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>

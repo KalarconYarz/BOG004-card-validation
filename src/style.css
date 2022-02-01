@@ -24,6 +24,8 @@ section {
 
 p {
     color: darkred;
+    font-size: 30px;
+
 }
 label {
     color: whitesmoke;
@@ -40,6 +42,13 @@ button {
 
 }
 
+.foot {
+    color:yellow;
+    font-size: small;
+    text-align: center;
+    display: block;
+ 
+}
 
 
  
