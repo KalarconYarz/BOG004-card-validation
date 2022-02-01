@@ -34,17 +34,21 @@ const validator = {
   },
 
   maskify: function(numeroTarjeta) {      
-   // console.log(numeroTarjeta);
-    const hide= numeroTarjeta.slice(0, -4) // slice: devuelve mismos valores //
-    const noHide= numeroTarjeta.slice(-4)
-    const nCardTranform = hide.split('').map(function(mascara) { //map: crea un nuevo array con los resultados
-    return mascara = ("#")
-    });   
-   const nCardTranform2 = nCardTranform.join('');     //join:retorna un array en un string
-  // console.log("tipo maskify", typeof nCardTranform2);
-   return nCardTranform2.concat(noHide);    // concat: permite unir uno o mas arrays
+ 
+    const array2 = numeroTarjeta.split("");     //split: separa los valores en comillas
+    const nLength = array2.length;
+    
+    for (let j = 0; j< nLength; j++) {
+      if (j < nLength -4 && nLength >4 ){
+        array2[j]= "#";
+      }
+    }
+      const nMaskify = array2.join("");   //join:retorna un array en un string
+      return nMaskify;
+    }
+      
 }    
     
-}
+
 
 export default validator;
