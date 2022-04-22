@@ -7,48 +7,88 @@
   </head>
   <body>
     <header>
-      <h1> BOX READ  
-        <img src="https://storage.googleapis.com/ln-archivos/banner/extralarge/47a58039-70be-2b80-a60d-61e1cb8272f2_imagen_web.png" id="portada" alt="Secciones" width="600" > 
-      </h1>
+      <h1> BOX READ </h1>
       <div id="container">
         <p>Bienvenid@ a su biblioteca virtual</p>
       </div>
     </header>
     
     <main>
-      <section>
-        <h2> Drama </h2>
-        <p> Es hora del drama </p>
-        <img id imagen1 src ="https://s-media-cache-ak0.pinimg.com/originals/c8/3c/e8/c83ce8545e755bb6839f69ea878ba26d.jpg " width="180">
-        <br>
-        <button id="Alquilar1" > Alquilar</button>
+      <!--Barra lateral con imágenes-->
+      <aside id="sideleft" class="side">
+        <img src="./Imagenes/aside.jpg" alt="side" />
+      </aside>
+        <!--Barra lateral con imágenes-->
+        <aside id="sideright" class="side">
+          <img src="./Imagenes/aside1.jpg" alt="side" />
+         </aside>
+      <section class="secciones">
+        <section id="Drama1">
+          <h2> Drama </h2>
+          <p> Es hora del drama </p>
+         <img src ="https://s-media-cache-ak0.pinimg.com/originals/c8/3c/e8/c83ce8545e755bb6839f69ea878ba26d.jpg "  width="180">
+          <br>
+          <button id="Alquilar1" class="botones"> Alquilar</button>
+          <br>
+        </section>
+        <section id="Drama2">
+          <img src ="./Imagenes/drama2.jpg "  width="180">
+          <br>
+          <button id="Alquilar" class="botones"> Alquilar</button>
+        </section>
       </section>
   
-        <section>
+        <section class="secciones">
+          <section id="Comedia1">
           <h2> Comedia </h2>
           <p> Vamos a reirnos </p>
           <img src="https://th.bing.com/th/id/OIP.NaVaRdv_lsk40YisDsi4FAAAAA?pid=ImgDet&rs=1" width="210">
           <br> 
-          <button id="Alquilar2" > Alquilar</button>
+          <button id="Alquilar2" class="botones"> Alquilar</button>
+          </section>
+          <section id="Comedia2">
+            <br>
+            <img src ="./Imagenes/comedia2.gif"  width="173">
+            <br>
+            <button id="Alquilar" class="botones"> Alquilar</button>
+          </section>
         </section>
   
-        <section>
-          <h2>  Amor </h2>
-          <p> Para un romantico</p>
-          <img src="https://th.bing.com/th/id/OIP.3neRE1n2H0_iLC6cBTctxAHaLR?pid=ImgDet&rs=1" width="180">
-          <br> 
-          <button id="Alquilar3" > Alquilar</button>
-        </section>
+        <section class="secciones">
+          <section id="Comedia1">
+            <h2>  Amor </h2>
+            <p> Para un romantico</p>
+            <img src="https://th.bing.com/th/id/OIP.3neRE1n2H0_iLC6cBTctxAHaLR?pid=ImgDet&rs=1" width="180">
+            <br> 
+            <button id="Alquilar3" class="botones"> Alquilar</button>
+          </section>
+          <section id="Comedia2">
+            <br>
+            <img src ="./Imagenes/amor2.jpg"  width="173">
+            <br>
+            <button id="Alquilar" class="botones"> Alquilar</button>
+          </section>
+        </section>   
   
-        <section>
-          <h2> Terror </h2>
-          <p> Buuuuu¡¡</p>
-          <img src="https://th.bing.com/th/id/OIP.q9PVd5E6EqKX2XriggWHoAHaLQ?pid=ImgDet&rs=1" width="180">
-          <br> 
-          <button id="Alquilar4" > Alquilar </button>
+        <section class="secciones">
+          <section class="terrores">
+          <section id="terror1">
+            <h2> Terror </h2>
+            <p> Buuuuu¡¡</p>
+            <img src="https://th.bing.com/th/id/OIP.q9PVd5E6EqKX2XriggWHoAHaLQ?pid=ImgDet&rs=1" width="180">
+            <br> 
+            <button id="Alquilar4" class="botones"> Alquilar </button>
+          </section>
+        </section>
+          <section id="terror2">
+            <br>
+            <img src ="./Imagenes/terror2.jpg"  width="170">
+            <br>
+            <button id="Alquilar" class="botones"> Alquilar</button>
+          </section>
+        </section>
         </section>
           <br>
-  
         <div class= "chechout_form">
           <input type ="text" class=" Nombre del usuario" >
           <label for ="Nombre del usuario" > Nombre del usuario </label>
@@ -61,15 +101,14 @@
               <input type="number" class="submit" id="tarjetaDeCredito" placeholder="0000 0000 0000" maxlenght="13">
               <label for ="tarjeta de crédito" > Tarjeta de crédito </label>
               <br>
-              <button id ="validar" type ="button" > validar</button>
+              <button id ="validar" class="botones" type ="button" > Validar</button>
             </div> 
           </form>
-        </div>
-      
-          <section class="ventana2" id="notifications">
+        <section class="ventana2" id="notifications">
             <img src="https://media.istockphoto.com/vectors/open-book-drawing-vector-id1175681997"  id="correcto" width="200"/>
             <img src="https://media.istockphoto.com/vectors/judge-gavel-and-books-drawing-vector-id1160025135"  id="incorrecto" width="200"/>
-          </section>             
+        </section>     
+        </div>
       </main>
     <footer id="foot">
       <h2> Gracias por visitarnos, vuelva pronto </h2>

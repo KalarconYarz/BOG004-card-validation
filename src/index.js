@@ -14,9 +14,8 @@ const ncAnswer = validator.maskify(numeroTarjeta);
       "su tarjeta de credito terminada en " +
       ncAnswer +
       " fue validada satisfactoriamente!.";
-    document.getElementById("correcto").style.display="block";  //muestre//
-
-    document.getElementById("incorrecto").style.display = "none"; //oculte//
+      document.getElementById("tarjetaDeCredito").value = "";
+    
     
   } else if (notification == false && ncAnswer != "") {
     document.getElementById("notifications").style.display="block" 
@@ -24,8 +23,7 @@ const ncAnswer = validator.maskify(numeroTarjeta);
       "su tarjeta de credito " +
       ncAnswer +
       " es inválida, por favor verifique su tarjeta!.";
-    document.getElementById("incorrecto").style.display = "block";
-    document.getElementById("correcto").style.display = "none";
+      document.getElementById("tarjetaDeCredito").value = "";
   }
   else {
     alert("Ingrese un número de tarjeta");
