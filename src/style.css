@@ -29,11 +29,7 @@ body {
 
 
 section {
-<<<<<<< HEAD
     color:rgb(255, 194, 52);
-=======
-    color:#d2691e;
->>>>>>> 159baf0f1f2ba7e86e8f2658b551937d695f2172
     font-size: 30px;
     display: inline-flex;
     flex-direction: column;
@@ -119,15 +115,14 @@ button {
   left: 0%;
 }
 #sideright {
- 
   position: absolute;
   right: 0%;
 }
 
 #cardcontainer {
-    display: block;
-    }
+  display: block;
+}
     
-    .ventana2 {
-     display: none;
-    }
+.ventana2 {
+  display: none;
+}
